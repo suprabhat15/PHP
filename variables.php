@@ -19,6 +19,9 @@ echo "<br>";
 // Arrays
 $friends = array("abcd","efgh","ijkl","mnop");
 echo var_dump($friends);   // for printing the details of array.
+foreach($friends as $value){
+    echo "<br>$value<br>";
+}
 echo "<br>";
 echo $friends[0];
 echo "<br>";
@@ -52,6 +55,37 @@ echo "The value of a == b is ";
 echo var_dump($a == $b); // php does not print false value. So, we use var_dump() to get the false value.
 echo "<br>";
 
+// Switch 
+$age =  33;
 
+switch($age){
+    case 12:
+        echo "Age is 12";
+        break;
+    case 24:
+        echo "Age is 24";
+        break;
+    case 36:
+        echo "Age is 36";
+        break;
+    case 48:
+        echo "Age is 48";
+        break;
+    default:
+       echo "Age is $age";
+}
+
+// for loop
+for( $i=0; $i<10; $i++ ){
+    echo "Value is $i <br>";
+}
+
+// while loop
+$i=0;
+while($i<5)
+{
+    echo "Value is $i <br>";
+    $i++; // $i++;
+}
 
 ?>
