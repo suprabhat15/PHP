@@ -88,4 +88,17 @@ while($i<5)
     $i++; // $i++;
 }
 
+// function
+function getSum($arr){
+    $sum=0;
+    foreach($arr as $val){
+        $sum += $val;
+    }
+    return $sum;
+}
+
+$marks = array(56,56,67,78,89);
+$value = getSum($marks);
+echo "The total sum is $value";
+
 ?>
