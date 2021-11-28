@@ -46,7 +46,7 @@
   </div>
 </nav>
 <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    if ($_SERVER['REQUEST_METHOD'] == 'POST'){ // $_SERVER['REQUEST_METHOD'] is used to check if the data is received through GET or POST method.
         $email = $_POST['email'];
         $password = $_POST['pass'];
         echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -59,7 +59,7 @@
     }
   // https://www.codewithharry.com/videos/php-tutorials-in-hindi-21  -> TO KNOW MORE ABOUT GET/POST.
 
-  if( $_REQUEST["email"] || $_REQUEST["pass"] ) {
+  if( $_REQUEST["email"] || $_REQUEST["pass"] ) {  // PHP provides $_REQUEST variable that allows to access the contents of both POST and GET methods. 
      echo "Welcome ". $_REQUEST['email']. "<br />";
      echo "You are ". $_REQUEST['pass']. " years old.";
   }  
