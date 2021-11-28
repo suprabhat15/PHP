@@ -17,7 +17,7 @@ echo "Connection is successful <br>";
 
 
 // Create a database
-$sql = "CREATE DATABASE kumarDB1";
+$sql = "CREATE DATABASE kumarDB";
 $result = mysqli_query($conn, $sql);
 
 if($result){
