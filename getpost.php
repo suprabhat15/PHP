@@ -58,7 +58,11 @@
       // Submit these to a database
     }
   // https://www.codewithharry.com/videos/php-tutorials-in-hindi-21  -> TO KNOW MORE ABOUT GET/POST.
-    
+
+  if( $_REQUEST["email"] || $_REQUEST["pass"] ) {
+     echo "Welcome ". $_REQUEST['email']. "<br />";
+     echo "You are ". $_REQUEST['pass']. " years old.";
+  }  
 ?>
 
 <div class="container mt-3">
