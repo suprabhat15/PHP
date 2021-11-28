@@ -133,4 +133,26 @@ for($i=0; $i<count($multiDimArray); $i++) {
     echo "<br>";
 }
 
+$x=98;
+// function printVal() {
+//     // $x=9;
+//     echo $x;  // Won't print 98 as global variables are outside the scope of functions.
+// }
+
+// echo "<br>";
+// echo $x;
+// echo "<br>";
+// echo printVal();
+
+function globalPrintVal() {
+    // $x=9;
+    global $x; // global keyword will let the function to access global variables.
+    echo $x;
+
+}
+// echo "<br>";
+// echo $x;
+echo "<br>";
+echo globalPrintVal();
+
 ?>
