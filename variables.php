@@ -98,7 +98,39 @@ function getSum($arr){
 }
 
 $marks = array(56,56,67,78,89);
+echo "<br>";
+echo var_dump($marks); // var_dump is required to print array;
+echo "<br>";
 $value = getSum($marks);
 echo "The total sum is $value";
+
+
+// Dates
+echo "<br>";
+echo date("dS D Y, g:i A");  // https://www.w3schools.com/php/func_date_date.asp
+echo "<br>";
+echo date(DATE_RFC822);
+
+// Associative Arrays -> contains key => value pair
+$colors = array('kumar' => 'red', 'supra' => 'blue', 'avinash' => 'green', 8 => '6');
+foreach ($colors as $key => $value){
+    echo "<br>Color of $key is $value";
+}
+
+// MultiDimensional Array 
+$multiDimArray = array(array(1,2,3,4), array(5,6,7,8), array(9,10,11,12));
+echo "<br>";
+echo var_dump($multiDimArray);  // var_dump is required to print multiDimArray;
+echo "<br>";
+echo $multiDimArray[0][3];
+echo "<br>";
+
+for($i=0; $i<count($multiDimArray); $i++) {
+    for($j=0; $j<count($multiDimArray[$i]); $j++){
+        echo $multiDimArray[$i][$j];
+        echo " ";
+    }
+    echo "<br>";
+}
 
 ?>
