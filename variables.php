@@ -152,7 +152,27 @@ function globalPrintVal() {
 }
 // echo "<br>";
 // echo $x;
-echo "<br>";
-echo globalPrintVal();
+// echo "<br>";
+// echo globalPrintVal();
 
+
+function globalVal() {
+    // $x=9;
+    global $x; 
+    $x=100;  // using this line, we can modify the value of global variables.
+    echo $x;
+
+}
+// echo "<br>";
+// echo $x;
+echo "<br>";
+echo globalVal();
+echo "<br>";
+echo $x;  // output will be 100 as line 162 modified the global variable's value.
+echo "<br>";
+echo var_dump($GLOBALS);  // used to print all the global key,value pair.
+foreach($GLOBALS as $key => $val){
+    echo "<br>";
+    echo "$key => $val";
+}
 ?>
