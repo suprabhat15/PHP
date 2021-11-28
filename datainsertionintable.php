@@ -16,21 +16,15 @@ if(!$conn){
 echo "Connection is successful <br>";
 
 
-// Create a table named "project" in database named kumarDB
-$sql = "CREATE TABLE `kumarDB`.`project` 
-    ( 
-        `Serial` INT NOT NULL AUTO_INCREMENT , 
-        `Name` TEXT NOT NULL , 
-        `Description` TEXT NOT NULL , 
-        `Deadline` DATE NOT NULL , PRIMARY KEY (`Serial`)
-    ) ";
+// Added data in table named "project" in database named kumarDB
+$sql = "INSERT INTO `project` (`Serial`, `Name`, `Description`, `Deadline`) VALUES (NULL, 'Suprabhat', 'Template', '2021-12-15')";
 $result = mysqli_query($conn, $sql);
 
 if($result){
-    echo "Table in database kumarDB created successfully <br>";
+    echo "data in table project inserted successfully <br>";
 }
 else{
-    echo "Table in database kumarDB Creation Failure : " . mysqli_error($conn);
+    echo "Insertion of data in table caused error : " . mysqli_error($conn);
     echo "<br>";
 }
 ?>
