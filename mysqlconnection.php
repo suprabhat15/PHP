@@ -6,7 +6,7 @@
 // Connecting to a Database
 $server = "localhost";
 $username = "root";
-$password = " ";
+$password = "";  // removing space from password value will resolve the error.
 
 // Create a connection 
 $conn = mysqli_connect($server, $username, $password);
