@@ -1,5 +1,5 @@
 <?php  
-// INSERT INTO `notes` (`sno`, `title`, `description`, `tstamp`) VALUES (NULL, 'But Books', 'Please buy books from Store', current_timestamp());
+// INSERT INTO `notes` (`serial`, `title`, `description`, `tstamp`) VALUES (NULL, 'Test', 'Checking the workflow', current_timestamp());
 $insert = false;
 $update = false;
 $delete = false;
@@ -91,7 +91,7 @@ else{
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <form action="/crud/index.php" method="POST">
+        <form action="/suprabhat/crud.php" method="POST">
           <div class="modal-body">
             <input type="hidden" name="snoEdit" id="snoEdit">
             <div class="form-group">
@@ -172,7 +172,7 @@ else{
   ?>
   <div class="container my-4">
     <h2>Add a Note to iNotes</h2>
-    <form action="/crud/index.php" method="POST">
+    <form action="/suprabhat/crud.php" method="POST">
       <div class="form-group">
         <label for="title">Note Title</label>
         <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp">
@@ -192,7 +192,7 @@ else{
     <table class="table" id="myTable">
       <thead>
         <tr>
-          <th scope="col">S.No</th>
+          <th scope="col">Serial No</th>
           <th scope="col">Title</th>
           <th scope="col">Description</th>
           <th scope="col">Actions</th>
